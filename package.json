@@ -9,7 +9,7 @@
   },
   "author": "Vojislav Sibinovic",
   "license": "MIT",
-  "homepage": "https://superVoja.github.io/sarga-yoga",
+  "homepage": "https://superVoja.github.io/sargayogastudio",
   "dependencies": {
     "gh-pages": "^2.1.0",
     "node-sass": "^4.12.0"
