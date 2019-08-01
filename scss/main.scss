@@ -1,0 +1,250 @@
+@import "config";
+@import "./scss/fontawesome.scss";
+@import "./scss/brands.scss";
+@import "./scss/solid.scss";
+@import "./scss/regular.scss";
+
+// GLOBAL
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $text-color;
+  font-family: $lato;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+#button {
+  display: inline-block;
+  background-color: #fbafaf;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-angle-up);
+    color: #fff;
+    line-height: 50px;
+    font-size: 3em;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #99e1e5;
+  }
+
+  &#button:active {
+    background-color: #555;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include easeOut;
+
+  h1 {
+    letter-spacing: 1rem;
+    font-weight: bolder;
+  }
+
+  .vertical-line {
+    border-left: 1px solid $primary-color;
+    height: 80px;
+  }
+}
+section {
+  padding: 4rem 2rem;
+}
+.container {
+  max-width: 960px;
+  //padding: 0 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+//LANDING PAGE
+.v-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-color;
+}
+
+.fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #f3e8cb, $alpha: 0.35);
+    z-index: 1;
+  }
+  video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+  }
+}
+
+.main-content {
+  z-index: 3;
+
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 2rem;
+    font-weight: lighter;
+    color: #fbafaf;
+  }
+
+  .main-btn {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fbafaf;
+
+    &:hover {
+      color: #fbd1b7;
+    }
+  }
+}
+
+// ABOUT SECTION
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 4rem;
+  //margin-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 6rem;
+
+  .about-text {
+    box-shadow: 0 1px 3px rgba($primary-color, 0.2);
+    padding: 2rem;
+    h2 {
+      letter-spacing: 1.8rem;
+      padding: 2rem 0;
+    }
+
+    h6 {
+      font-weight: lighter;
+    }
+  }
+  .about-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      border-radius: 5%;
+    }
+  }
+}
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 1s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.8s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// GALLERY SECTION
+
+.gallery-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-gap: 2rem;
+  margin-top: 4rem;
+
+  .gallery-img img {
+    width: 100%;
+    transition: transform 1s;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+}
+//Contact section
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  text-align: center;
+  grid-gap: 2rem;
+  margin-top: 4rem;
+
+  img {
+    width: 25%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+  }
+}
+
+//Footer section
+.footer-content {
+  border-top: 2px solid $primary-color;
+
+  .copyrights {
+    font-size: 0.6rem;
+    font-weight: lighter;
+  }
+}
+@import "mobile";

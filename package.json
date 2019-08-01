@@ -1,0 +1,17 @@
+{
+  "name": "sarga-yoga-studio",
+  "version": "1.0.0",
+  "description": "A website for a local yoga studio",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Vojislav Sibinovic",
+  "license": "MIT",
+  "homepage": "https://superVoja.github.io/sarga-yoga",
+  "dependencies": {
+    "gh-pages": "^2.1.0",
+    "node-sass": "^4.12.0"
+  }
+}

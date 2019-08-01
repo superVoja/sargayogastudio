@@ -1,0 +1,51 @@
+//Widescreens
+@include mediaXl {
+}
+
+//Desktops & Laptops
+@include mediaLg {
+}
+
+//Tablets & Small Laptops
+@include mediaMd {
+}
+
+//Smartphones
+@include mediaSm {
+  #video-bg {
+    display: none;
+  }
+  .v-header {
+    background: url("../img/poster.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 3rem;
+
+    .main-content {
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+  .section-heading h1 {
+    letter-spacing: normal;
+  }
+  .about-content {
+    text-align: center;
+    padding: 0;
+
+    .about-text {
+      padding: 0 2rem;
+
+      h2 {
+        letter-spacing: normal;
+      }
+    }
+
+    // .about-img {
+
+    // }
+  }
+}
