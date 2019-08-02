@@ -128,17 +128,17 @@ section {
     font-size: 3rem;
     letter-spacing: 2rem;
     font-weight: lighter;
-    color: #fbafaf;
+    color: $main-text-color;
   }
 
   .main-btn {
     color: $text-color;
     text-decoration: none;
     font-size: 1.2rem;
-    color: #fbafaf;
+    color: $main-text-color;
 
     &:hover {
-      color: #fbd1b7;
+      color: $main-text-color;
     }
   }
 }
@@ -149,7 +149,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 4rem;
-  //margin-top: 4rem;
+  margin-top: 4rem;
   padding-left: 4rem;
   padding-right: 4rem;
   padding-top: 6rem;
