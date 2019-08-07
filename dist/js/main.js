@@ -16,7 +16,7 @@
 
 var win = $(window);
 
-var allMods = $(".about-content");
+var allMods = $(".withEffect");
 
 allMods.each(function(i, el) {
   var el = $(el);
