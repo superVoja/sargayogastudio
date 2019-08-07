@@ -4413,14 +4413,14 @@ body {
   border: 0;
   font-size: 1rem;
   line-height: 1.5;
-  color: #444;
+  color: #63707e;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   overflow-x: hidden; }
 
 #button {
   display: inline-block;
-  background-color: #fbafaf;
+  background-color: #f6a7ba;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -4439,9 +4439,9 @@ body {
     font-size: 3em; }
   #button:hover {
     cursor: pointer;
-    background-color: #99e1e5; }
+    background-color: #d2f3e0; }
   #button#button:active {
-    background-color: #555; }
+    background-color: #63707e; }
   #button.show {
     opacity: 1;
     visibility: visible; }
@@ -4456,7 +4456,7 @@ body {
     letter-spacing: 1rem;
     font-weight: bolder; }
   .section-heading .vertical-line {
-    border-left: 1px solid #444;
+    border-left: 1px solid #feb9c8;
     height: 80px; }
 
 section {
@@ -4472,7 +4472,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #444; }
+  color: #63707e; }
 
 .fullscreen-video-wrap {
   position: absolute;
@@ -4488,7 +4488,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(243, 232, 203, 0.35);
+    background: rgba(254, 185, 200, 0.25);
     z-index: 1; }
   .fullscreen-video-wrap video {
     min-width: 100%;
@@ -4501,14 +4501,15 @@ section {
     font-size: 3rem;
     letter-spacing: 2rem;
     font-weight: lighter;
-    color: #fff; }
+    color: #f5fbf1; }
   .main-content .main-btn {
-    color: #444;
+    color: #63707e;
     text-decoration: none;
-    font-size: 1.2rem;
-    color: #fff; }
+    font-size: 1.4rem;
+    color: #f5fbf1; }
     .main-content .main-btn:hover {
-      color: #fff; }
+      color: #f6a7ba;
+      transition: all 0.5s ease-out; }
 
 .about-content {
   display: grid;
@@ -4519,13 +4520,14 @@ section {
   padding-right: 4rem;
   padding-top: 6rem; }
   .about-content .about-text {
-    box-shadow: 0 1px 3px rgba(68, 68, 68, 0.2);
+    box-shadow: 0 1px 3px rgba(254, 185, 200, 0.2);
     padding: 2rem; }
     .about-content .about-text h2 {
       letter-spacing: 1.8rem;
       padding: 2rem 0; }
     .about-content .about-text h6 {
-      font-weight: lighter; }
+      font-weight: lighter;
+      color: #f6a7ba; }
   .about-content .about-img {
     display: flex;
     align-items: center;
@@ -4575,15 +4577,15 @@ section {
     list-style: none; }
   .contact-content a {
     text-decoration: none;
-    color: #444; }
+    color: #63707e; }
 
 .footer-content {
-  border-top: 2px solid #444; }
+  border-top: 2px solid #feb9c8; }
   .footer-content .copyrights {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: lighter; }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   #video-bg {
     display: none; }
   .v-header {
