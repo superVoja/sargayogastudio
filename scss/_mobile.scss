@@ -8,10 +8,6 @@
 
 //Tablets & Small Laptops
 @include mediaMd {
-}
-
-//Smartphones
-@include mediaSm {
   #video-bg {
     display: none;
   }
@@ -43,9 +39,9 @@
         letter-spacing: normal;
       }
     }
-
-    // .about-img {
-
-    // }
   }
+}
+
+//Smartphones
+@include mediaSm {
 }

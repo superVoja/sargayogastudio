@@ -24,7 +24,7 @@ body {
 }
 #button {
   display: inline-block;
-  background-color: #fbafaf;
+  background-color: $secondary-color;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -48,11 +48,11 @@ body {
   }
   &:hover {
     cursor: pointer;
-    background-color: #99e1e5;
+    background-color: $ascending-color;
   }
 
   &#button:active {
-    background-color: #555;
+    background-color: $text-color;
   }
 
   &.show {
@@ -111,7 +111,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba($color: #f3e8cb, $alpha: 0.35);
+    background: rgba($primary-color, $alpha: 0.25);
     z-index: 1;
   }
   video {
@@ -128,17 +128,18 @@ section {
     font-size: 3rem;
     letter-spacing: 2rem;
     font-weight: lighter;
-    color: $main-text-color;
+    color: $secondary-text-color;
   }
 
   .main-btn {
     color: $text-color;
     text-decoration: none;
-    font-size: 1.2rem;
-    color: $main-text-color;
+    font-size: 1.4rem;
+    color: $secondary-text-color;
 
     &:hover {
-      color: $main-text-color;
+      color: $secondary-color;
+      @include easeOut;
     }
   }
 }
@@ -164,6 +165,7 @@ section {
 
     h6 {
       font-weight: lighter;
+      color: $secondary-color;
     }
   }
   .about-img {
