@@ -11,6 +11,13 @@
 html {
   scroll-behavior: smooth;
 }
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 body {
   margin: 0;
   padding: 0;
@@ -111,7 +118,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba($primary-color, $alpha: 0.25);
+    background: rgba($primary-color, $alpha: 0.4);
     z-index: 1;
   }
   video {
@@ -134,13 +141,23 @@ section {
   .main-btn {
     color: $text-color;
     text-decoration: none;
-    font-size: 1.4rem;
-    color: $secondary-text-color;
+    font-size: 1.2rem;
 
-    &:hover {
-      color: $secondary-color;
-      @include easeOut;
-    }
+    border-radius: 5%;
+    padding: 0.5rem 1rem;
+    color: $secondary-text-color;
+    @include btn-border-drawing(
+      $secondary-text-color,
+      $secondary-color,
+      2px,
+      bottom,
+      right
+    );
+
+    // &:hover {
+    //   color: $secondary-color;
+    //   @include easeOut;
+    // }
   }
 }
 
