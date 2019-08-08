@@ -132,18 +132,19 @@ section {
   z-index: 3;
 
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: "Aloja";
     letter-spacing: 2rem;
     font-weight: lighter;
     color: $secondary-text-color;
+    padding: 2rem 0;
   }
 
   .main-btn {
     color: $text-color;
+
     text-decoration: none;
     font-size: 1.2rem;
-
-    border-radius: 5%;
     padding: 0.5rem 1rem;
     color: $secondary-text-color;
     @include btn-border-drawing(

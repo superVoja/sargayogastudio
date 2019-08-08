@@ -6,6 +6,15 @@ $secondary-text-color: #f5fbf1;
 $ascending-color: #d2f3e0;
 $lato: "Lato", sans-serif;
 
+@font-face {
+  font-family: "Cunia";
+  src: url("/dist/webfonts/cunia.ttf");
+}
+@font-face {
+  font-family: "Aloja";
+  src: url("/dist/webfonts/Aloja-Light.otf");
+}
+
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
