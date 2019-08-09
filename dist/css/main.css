@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @font-face {
-  font-family: "Cunia";
-  src: url("/dist/webfonts/cunia.ttf"); }
-
-@font-face {
   font-family: "Aloja";
   src: url("/dist/webfonts/Aloja-Light.otf"); }
 
@@ -4546,9 +4542,9 @@ section {
       border-top-width: 2px;
       border-right-width: 2px; }
     .main-content .main-btn:hover {
-      color: #f6a7ba; }
+      color: #63707e; }
       .main-content .main-btn:hover::before, .main-content .main-btn:hover::after {
-        border-color: #f6a7ba;
+        border-color: #63707e;
         transition: border-color 0s, width 0.25s, height 0.25s;
         width: 100%;
         height: 100%; }
@@ -4583,21 +4579,25 @@ section {
       border-radius: 5%; }
 
 .come-in {
-  transform: translateY(150px);
-  animation: come-in 1s ease forwards; }
+  animation: 1s ease-out fadeIn;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .come-in:nth-child(odd) {
   animation-duration: 0.8s; }
 
 .already-visible {
-  transform: translateY(0);
   animation: none; }
 
 @keyframes come-in {
   from {
     opacity: 0; }
   to {
-    transform: translateY(0);
     opacity: 1; } }
 
 .gallery-content {
@@ -4617,6 +4617,15 @@ section {
   text-align: center;
   grid-gap: 2rem;
   margin-top: 4rem; }
+  .contact-content .contact {
+    animation: 1s ease-out fadeIn;
+    animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .contact-content img {
     width: 25%; }
   .contact-content ul {
@@ -4630,6 +4639,18 @@ section {
   .footer-content .copyrights {
     font-size: 0.8rem;
     font-weight: lighter; }
+
+.contact:nth-child(1) {
+  animation-delay: 0.5s; }
+
+.contact:nth-child(2) {
+  animation-delay: 1s; }
+
+.contact:nth-child(3) {
+  animation-delay: 1.5s; }
+
+.contact:nth-child(4) {
+  animation-delay: 2s; }
 
 @media screen and (max-width: 768px) {
   #video-bg {

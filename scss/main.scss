@@ -149,7 +149,7 @@ section {
     color: $secondary-text-color;
     @include btn-border-drawing(
       $secondary-text-color,
-      $secondary-color,
+      $text-color,
       2px,
       bottom,
       right
@@ -198,14 +198,15 @@ section {
   }
 }
 .come-in {
-  transform: translateY(150px);
-  animation: come-in 1s ease forwards;
+  //transform: translateY(150px);
+  //animation: come-in 1s ease forwards;
+  @include fadeIn;
 }
 .come-in:nth-child(odd) {
   animation-duration: 0.8s;
 }
 .already-visible {
-  transform: translateY(0);
+  //transform: translateY(0);
   animation: none;
 }
 
@@ -214,7 +215,7 @@ section {
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    //transform: translateY(0);
     opacity: 1;
   }
 }
@@ -244,6 +245,10 @@ section {
   grid-gap: 2rem;
   margin-top: 4rem;
 
+  .contact {
+    @include fadeIn;
+  }
+
   img {
     width: 25%;
   }
@@ -266,4 +271,13 @@ section {
     font-weight: lighter;
   }
 }
+
+@for $i from 1 through 4 {
+  .contact {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.5s;
+    }
+  }
+}
+
 @import "mobile";
