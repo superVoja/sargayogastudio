@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@font-face {
+  font-family: "Aloja";
+  src: url("/dist/webfonts/Aloja-Light.otf"); }
+
 /*!
  * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -4407,6 +4411,13 @@ readers do not read off random characters that represent icons */
 html {
   scroll-behavior: smooth; }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
 body {
   margin: 0;
   padding: 0;
@@ -4488,7 +4499,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(254, 185, 200, 0.25);
+    background: rgba(254, 185, 200, 0.4);
     z-index: 1; }
   .fullscreen-video-wrap video {
     min-width: 100%;
@@ -4498,18 +4509,49 @@ section {
 .main-content {
   z-index: 3; }
   .main-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: "Aloja";
     letter-spacing: 2rem;
     font-weight: lighter;
-    color: #f5fbf1; }
+    color: #f5fbf1;
+    padding: 2rem 0; }
   .main-content .main-btn {
     color: #63707e;
     text-decoration: none;
-    font-size: 1.4rem;
-    color: #f5fbf1; }
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    color: #f5fbf1;
+    box-shadow: inset 0 0 0 2px #f5fbf1;
+    color: #f5fbf1;
+    transition: color 0.25s 0.08333s;
+    position: relative; }
+    .main-content .main-btn::before, .main-content .main-btn::after {
+      border: 0 solid transparent;
+      box-sizing: border-box;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: 0;
+      right: 0; }
+    .main-content .main-btn::before {
+      border-bottom-width: 2px;
+      border-left-width: 2px; }
+    .main-content .main-btn::after {
+      border-top-width: 2px;
+      border-right-width: 2px; }
     .main-content .main-btn:hover {
-      color: #f6a7ba;
-      transition: all 0.5s ease-out; }
+      color: #63707e; }
+      .main-content .main-btn:hover::before, .main-content .main-btn:hover::after {
+        border-color: #63707e;
+        transition: border-color 0s, width 0.25s, height 0.25s;
+        width: 100%;
+        height: 100%; }
+      .main-content .main-btn:hover::before {
+        transition-delay: 0s, 0s, 0.25s; }
+      .main-content .main-btn:hover::after {
+        transition-delay: 0s, 0.25s, 0s; }
 
 .about-content {
   display: grid;
@@ -4537,21 +4579,25 @@ section {
       border-radius: 5%; }
 
 .come-in {
-  transform: translateY(150px);
-  animation: come-in 1s ease forwards; }
+  animation: 1s ease-out fadeIn;
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .come-in:nth-child(odd) {
   animation-duration: 0.8s; }
 
 .already-visible {
-  transform: translateY(0);
   animation: none; }
 
 @keyframes come-in {
   from {
     opacity: 0; }
   to {
-    transform: translateY(0);
     opacity: 1; } }
 
 .gallery-content {
@@ -4571,6 +4617,15 @@ section {
   text-align: center;
   grid-gap: 2rem;
   margin-top: 4rem; }
+  .contact-content .contact {
+    animation: 1s ease-out fadeIn;
+    animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .contact-content img {
     width: 25%; }
   .contact-content ul {
@@ -4585,6 +4640,18 @@ section {
     font-size: 0.8rem;
     font-weight: lighter; }
 
+.contact:nth-child(1) {
+  animation-delay: 0.5s; }
+
+.contact:nth-child(2) {
+  animation-delay: 1s; }
+
+.contact:nth-child(3) {
+  animation-delay: 1.5s; }
+
+.contact:nth-child(4) {
+  animation-delay: 2s; }
+
 @media screen and (max-width: 768px) {
   #video-bg {
     display: none; }
@@ -4596,9 +4663,10 @@ section {
     min-height: 100vh;
     padding: 0 3rem; }
     .v-header .main-content h1 {
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      letter-spacing: 1.2rem; }
   .section-heading h1 {
-    letter-spacing: normal; }
+    letter-spacing: 0.6rem; }
   .about-content {
     text-align: center;
     padding: 0; }
