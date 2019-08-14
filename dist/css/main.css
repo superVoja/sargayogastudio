@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @font-face {
   font-family: "Aloja";
-  src: url("/dist/webfonts/Aloja-Light.otf"); }
+  src: url("/dist/webfonts/alojalight.otf"); }
 
 /*!
  * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
@@ -4425,7 +4425,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #63707e;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif, sans-serif;
   font-weight: 300;
   overflow-x: hidden; }
 
