@@ -130,6 +130,10 @@ section {
 
 .main-content {
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-size: 2rem;
@@ -144,21 +148,14 @@ section {
     color: $text-color;
 
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.5rem 1rem;
     color: $secondary-text-color;
-    @include btn-border-drawing(
-      $secondary-text-color,
-      $text-color,
-      2px,
-      bottom,
-      right
-    );
 
-    // &:hover {
-    //   color: $secondary-color;
-    //   @include easeOut;
-    // }
+    &:hover {
+      color: $secondary-color;
+      @include easeOut;
+    }
   }
 }
 
@@ -182,6 +179,7 @@ section {
     }
 
     h6 {
+      font-size: 0.8rem;
       font-weight: lighter;
       color: $secondary-color;
     }
