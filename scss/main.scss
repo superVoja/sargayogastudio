@@ -305,7 +305,7 @@ section {
   .gallery-img img {
     width: 100%;
     transition: transform 1s;
-
+    cursor: pointer;
     &:hover {
       transform: translateY(-10px);
     }
