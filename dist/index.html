@@ -17,7 +17,7 @@
           src="./img/sarga-video_1.mp4"
           autoplay
           muted
-          poster="../dist/img/poster.png"
+          poster="./img/poster.png"
           id="video-bg"
         ></video>
       </div>
@@ -28,13 +28,20 @@
     </header>
     <!--About section-->
     <section class="section about-section" id="about">
+      <div class="myModal" id="myModal">
+        <span class="close" id="close">&times;</span>
+        <div class="modalBlock" id="modalBlock">
+          <img id="img01" src="" alt="" class="modalContent" />
+          <div id="caption"></div>
+        </div>
+      </div>
       <div class="section-heading">
         <h1>what we do</h1>
         <div class="vertical-line"></div>
       </div>
       <div class="about-content withEffect">
         <div class="about-text">
-          <h2 class="hatha-heading">hatha yoga</h2>
+          <h2 class="hatha-heading">Hatha yoga</h2>
           <h6>(The word "Hatha" means "Force" in Sanskrit.)</h6>
           <p>
             "Hatha" yoga is a broad term. One may say it is a form spirit and
@@ -58,15 +65,27 @@
           </p>
         </div>
         <div class="about-img">
-          <img src="./img/sarga-4.jpg" alt="" />
+          <img
+            class="myImg"
+            id="img1"
+            src="./img/sarga-4.jpg"
+            alt="sarga-img-4"
+          />
+        </div>
+        <div class="myModal" id="myModal">
+          <span class="close" id="close">&times;</span>
+          <div class="modalBlock" id="modalBlock">
+            <img id="img01" src="" alt="" class="modalContent" />
+            <div id="caption"></div>
+          </div>
         </div>
       </div>
       <div class="about-content withEffect">
         <div class="about-img">
-          <img src="./img/sarga-5.jpg" alt="" />
+          <img class="myImg" src="./img/sarga-5.jpg" alt="Be one with nature" />
         </div>
         <div class="about-text">
-          <h2 class="sarga-heading">sarga yoga</h2>
+          <h2 class="sarga-heading">Sarga yoga</h2>
           <h6>(The word "Sarga" mean "Nature" in Sanskrit.)</h6>
           <p>
             Connect with nature and with the help of yoga technique, discover
@@ -87,7 +106,7 @@
       </div>
       <div class="about-content withEffect">
         <div class="about-text">
-          <h2 class="instructor-heading">the teacher</h2>
+          <h2 class="instructor-heading">The teacher</h2>
           <h6>(Aleksandra Janković)</h6>
           <p>
             I am a certificed hatha yoga instructor in the school Vidya Yoga
@@ -95,7 +114,11 @@
           </p>
         </div>
         <div class="about-img">
-          <img src="./img/sarga-6.jpg" alt="" />
+          <img
+            class="myImg"
+            src="./img/sarga-6.jpg"
+            alt="Yoga is not just for the body"
+          />
         </div>
       </div>
     </section>
@@ -161,7 +184,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <p>
+          <p class="footer-quote">
             “Through sustained focus and meditation on our patterns, habits, and
             conditioning, we gain knowledge and understanding of our past and
             how we can change the patterns that aren’t serving us to live more

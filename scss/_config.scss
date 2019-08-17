@@ -8,11 +8,25 @@ $lato: "Lato", sans-serif;
 
 @font-face {
   font-family: "Aloja";
-  src: url("./dist/webfonts/Aloja-Light.woff");
+  src: url("../webfonts/Aloja-Light.otf");
 }
+
 //EaseOut mixin
 @mixin easeOut {
   transition: all 0.5s ease-out;
+}
+//Zoom mixin
+@mixin zoom {
+  animation: 0.7s ease-out zoom;
+
+  @keyframes zoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
 }
 //FadeIn mixin
 @mixin fadeIn {
