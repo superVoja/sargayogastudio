@@ -4647,7 +4647,8 @@ section {
   margin-top: 4rem; }
   .gallery-content .gallery-img img {
     width: 100%;
-    transition: transform 1s; }
+    transition: transform 1s;
+    cursor: pointer; }
     .gallery-content .gallery-img img:hover {
       transform: translateY(-10px); }
 
