@@ -5,6 +5,8 @@ $text-color: #63707e;
 $secondary-text-color: #f5fbf1;
 $ascending-color: #d2f3e0;
 $lato: "Lato", sans-serif;
+$ani-speed: 3s;
+$ani-delay: 1.5s;
 
 @font-face {
   font-family: "Aloja";
@@ -39,6 +41,22 @@ $lato: "Lato", sans-serif;
     }
     100% {
       opacity: 1;
+    }
+  }
+}
+
+//Scroll mixin
+@mixin scroll {
+  animation: 1.5s infinite scroll;
+
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateY(46px);
     }
   }
 }
