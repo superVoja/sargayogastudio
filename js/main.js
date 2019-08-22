@@ -1,39 +1,4 @@
-//Scroll effect
-// (function($) {
-//   $.fn.visible = function(partial) {
-//     var $t = $(this),
-//       $w = $(window),
-//       viewTop = $w.scrollTop(),
-//       viewBottom = viewTop + $w.height(),
-//       _top = $t.offset().top,
-//       _bottom = _top + $t.height(),
-//       compareTop = partial === true ? _bottom : _top,
-//       compareBottom = partial === true ? _top : _bottom;
-
-//     return compareBottom <= viewBottom && compareTop >= viewTop;
-//   };
-// })(jQuery);
-
-// var win = $(window);
-
-// var allMods = $(".withEffect");
-
-// allMods.each(function(i, el) {
-//   var el = $(el);
-//   if (el.visible(true)) {
-//     el.addClass("already-visible");
-//   }
-// });
-
-// win.scroll(function(event) {
-//   allMods.each(function(i, el) {
-//     var el = $(el);
-//     if (el.visible(true)) {
-//       el.addClass("come-in");
-//     }
-//   });
-// });
-
+const myModal = document.querySelectorAll("#myModal");
 //Image preview model
 window.onload = function() {
   var imgArr = document.getElementsByClassName("myImg");
@@ -57,10 +22,13 @@ window.onload = function() {
     modalImg.src = pic.src;
     modalImg.alt = pic.alt;
     caption.innerHTML = modalImg.alt;
+
+    bodyScrollLock.disableBodyScroll(myModal);
   }
 
   function close() {
     modalWindow.style.display = "none";
+    bodyScrollLock.enableBodyScroll(myModal);
   }
 
   window.addEventListener("click", function(event) {
@@ -73,6 +41,7 @@ window.onload = function() {
   span.onclick = function() {
     modalBlock.style.transform = "translateY(-500%)";
     setTimeout(close, 500);
+    bodyScrollLock.enableBodyScroll(myModal);
   };
 };
 
