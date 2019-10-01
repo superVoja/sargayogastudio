@@ -177,8 +177,6 @@ section {
   }
 }
 
-// ABOUT SECTION
-
 .myModal {
   display: none;
   position: fixed;
@@ -250,25 +248,25 @@ section {
   }
 }
 
+/* ----- ABOUT SECTION ----- */
+
 .about-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-gap: 4rem;
+  grid-gap: 2rem;
   margin-top: 4rem;
   padding-left: 4rem;
   padding-right: 4rem;
-  padding-top: 6rem;
+  padding-top: 2rem;
 
   .about-text {
     h2 {
-      letter-spacing: 1.8rem;
-      padding: 2rem 0;
+      letter-spacing: 1.2rem;
+      margin: 0;
     }
-
-    h6 {
-      font-size: 0.8rem;
-      font-weight: lighter;
+    p.sub-heading {
       color: $secondary-color;
+      font-size: 0.8rem;
     }
   }
   .about-img {
@@ -284,30 +282,8 @@ section {
     }
   }
 }
-.come-in {
-  //transform: translateY(150px);
-  //animation: come-in 1s ease forwards;
-  @include fadeIn;
-}
-.come-in:nth-child(odd) {
-  animation-duration: 0.8s;
-}
-.already-visible {
-  //transform: translateY(0);
-  animation: none;
-}
 
-@keyframes come-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    //transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// GALLERY SECTION
+/*----- GALLERY SECTION -----*/
 
 .gallery-content {
   display: grid;
@@ -325,7 +301,7 @@ section {
   }
 }
 
-//Contact section
+/*----- CONTACT SECTION -----*/
 
 .contact-content {
   display: grid;
@@ -333,10 +309,6 @@ section {
   text-align: center;
   grid-gap: 2rem;
   margin-top: 4rem;
-
-  // .contact {
-  //   @include fadeIn;
-  // }
 
   img {
     width: 25%;
@@ -355,7 +327,7 @@ section {
   }
 }
 
-//Footer section
+/*----- FOOTER -----*/
 
 .footer-content {
   border-top: 2px solid $primary-color;
@@ -369,13 +341,5 @@ section {
     padding: 1rem;
   }
 }
-
-// @for $i from 1 through 4 {
-//   .contact {
-//     &:nth-child(#{$i}) {
-//       animation-delay: $i * 0.5s;
-//     }
-//   }
-// }
 
 @import "mobile";

@@ -17,6 +17,7 @@ $ani-delay: 1.5s;
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
+
 //Zoom mixin
 @mixin zoom {
   animation: 0.7s ease-out zoom;
@@ -30,6 +31,7 @@ $ani-delay: 1.5s;
     }
   }
 }
+
 //FadeIn mixin
 @mixin fadeIn {
   animation: 1s ease-out fadeIn;
@@ -45,7 +47,7 @@ $ani-delay: 1.5s;
   }
 }
 
-//Scroll mixin
+//Scroll mixin for scroll icon
 @mixin scroll {
   animation: 1.5s infinite scroll;
 
