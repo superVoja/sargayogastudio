@@ -8,17 +8,28 @@ window.onload = function() {
   var span = document.getElementById("close");
   var modalBlock = document.getElementById("modalBlock");
   var next = document.getElementById("next");
+  var prev = document.getElementById("prev");
+  var slideIndex = "";
 
   for (i = 0; i < imgArr.length; i++) {
     var picture = imgArr[i];
     var list = Array.from(imgArr);
     picture.onclick = function() {
-      openImg(this);
-
       var index = list.indexOf(this);
+
+      slideIndex = index;
+      openImg(imgArr[index]);
       console.log(index);
     };
   }
+
+  next.addEventListener("click", function(event) {
+    openImg(imgArr[(slideIndex += 1)]);
+  });
+
+  prev.addEventListener("click", function(event) {
+    openImg(imgArr[(slideIndex -= 1)]);
+  });
 
   function openImg(pic) {
     modalWindow.style.display = "block";
@@ -48,7 +59,6 @@ window.onload = function() {
     bodyScrollLock.enableBodyScroll(myModal);
   };
 };
-
 //Back to top button
 var btn = $("#button");
 
