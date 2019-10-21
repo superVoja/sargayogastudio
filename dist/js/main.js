@@ -1,4 +1,3 @@
-const myModal = document.querySelectorAll("#myModal");
 //Image preview model
 window.onload = function() {
   var imgArr = document.getElementsByClassName("myImg");
@@ -8,11 +7,16 @@ window.onload = function() {
   var caption = document.getElementById("caption");
   var span = document.getElementById("close");
   var modalBlock = document.getElementById("modalBlock");
+  var next = document.getElementById("next");
 
   for (i = 0; i < imgArr.length; i++) {
     var picture = imgArr[i];
+    var list = Array.from(imgArr);
     picture.onclick = function() {
       openImg(this);
+
+      var index = list.indexOf(this);
+      console.log(index);
     };
   }
 
