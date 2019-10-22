@@ -19,16 +19,23 @@ window.onload = function() {
 
       slideIndex = index;
       openImg(imgArr[index]);
-      console.log(index);
     };
   }
 
   next.addEventListener("click", function(event) {
-    openImg(imgArr[(slideIndex += 1)]);
+    if (slideIndex >= list.length - 1) {
+      event.preventDefault();
+    } else {
+      openImg(imgArr[(slideIndex += 1)]);
+    }
   });
 
   prev.addEventListener("click", function(event) {
-    openImg(imgArr[(slideIndex -= 1)]);
+    if (slideIndex < 1) {
+      event.preventDefault();
+    } else {
+      openImg(imgArr[(slideIndex -= 1)]);
+    }
   });
 
   function openImg(pic) {
