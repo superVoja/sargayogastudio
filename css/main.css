@@ -4560,8 +4560,7 @@ section {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(245, 251, 241, 0.6);
-  /* Position the "next button" to the right */ }
+  background-color: rgba(245, 251, 241, 0.6); }
   .myModal .prev,
   .myModal .next {
     cursor: pointer;
@@ -4657,6 +4656,30 @@ section {
       width: 100%;
       border-radius: 15px; }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 350ms ease-in; }
+
+.fade-in.appear {
+  opacity: 1; }
+
+.from-left {
+  transform: translateX(-50%);
+  transition-delay: 1s; }
+
+.from-right {
+  transform: translateX(50%); }
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, transform 600ms ease-in-out;
+  opacity: 0; }
+
+.from-left.appear,
+.from-right.appear {
+  transform: translateX(0);
+  opacity: 1; }
+
 /*----- GALLERY SECTION -----*/
 .gallery-content {
   display: grid;
@@ -4711,7 +4734,8 @@ section {
       font-size: 1.7rem;
       letter-spacing: 1.2rem; }
   .section-heading h1 {
-    letter-spacing: 0.6rem; }
+    letter-spacing: 0.6rem;
+    text-align: center; }
   .about-content {
     text-align: center;
     padding: 0; }

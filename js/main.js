@@ -19,16 +19,23 @@ window.onload = function() {
 
       slideIndex = index;
       openImg(imgArr[index]);
-      console.log(index);
     };
   }
 
   next.addEventListener("click", function(event) {
-    openImg(imgArr[(slideIndex += 1)]);
+    if (slideIndex >= list.length - 1) {
+      event.preventDefault();
+    } else {
+      openImg(imgArr[(slideIndex += 1)]);
+    }
   });
 
   prev.addEventListener("click", function(event) {
-    openImg(imgArr[(slideIndex -= 1)]);
+    if (slideIndex < 1) {
+      event.preventDefault();
+    } else {
+      openImg(imgArr[(slideIndex -= 1)]);
+    }
   });
 
   function openImg(pic) {
@@ -73,4 +80,34 @@ $(window).scroll(function() {
 btn.on("click", function(e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, "300");
+});
+//Intersection Observer
+const faders = document.querySelectorAll(".fade-in");
+const sliders = document.querySelectorAll(".slide-in");
+const appearOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -200px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+  entries,
+  appearOnScroll
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
+
+sliders.forEach(slider => {
+  appearOnScroll.observe(slider);
 });
