@@ -4560,8 +4560,7 @@ section {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgba(245, 251, 241, 0.6);
-  /* Position the "next button" to the right */ }
+  background-color: rgba(245, 251, 241, 0.6); }
   .myModal .prev,
   .myModal .next {
     cursor: pointer;
@@ -4711,7 +4710,8 @@ section {
       font-size: 1.7rem;
       letter-spacing: 1.2rem; }
   .section-heading h1 {
-    letter-spacing: 0.6rem; }
+    letter-spacing: 0.6rem;
+    text-align: center; }
   .about-content {
     text-align: center;
     padding: 0; }
