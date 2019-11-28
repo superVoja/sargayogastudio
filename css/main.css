@@ -4497,9 +4497,9 @@ section {
     height: 100%;
     width: 100vw;
     position: absolute;
+    background: rgba(210, 243, 224, 0.2);
     top: 0;
     left: 0;
-    background: rgba(254, 185, 200, 0.4);
     z-index: 1; }
   .fullscreen-video-wrap video {
     min-width: 100%;
