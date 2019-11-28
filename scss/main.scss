@@ -222,6 +222,8 @@ section {
 }
 
 .modalBlock {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -233,10 +235,7 @@ section {
     -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
-
     position: absolute;
-    top: 50%;
-
     max-width: 85vw;
     max-height: 85vh;
   }
@@ -323,41 +322,47 @@ section {
 .fade-in.appear {
   opacity: 1;
 }
-.from-left {
-  transform: translateX(-50%);
-  transition-delay: 1s;
-}
-.from-right {
-  transform: translateX(50%);
-}
-.from-left,
-.from-right {
-  transition: opacity 250ms ease-in, transform 600ms ease-in-out;
-  opacity: 0;
-}
-.from-left.appear,
-.from-right.appear {
-  transform: translateX(0);
-  opacity: 1;
-}
+
 /*----- GALLERY SECTION -----*/
 
 .gallery-content {
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-gap: 1rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(20, 6vw);
+  grid-gap: 15px;
   margin-top: 4rem;
 
-  .gallery-img img {
-    width: 100%;
-    transition: transform 1s;
-    cursor: pointer;
-    &:hover {
-      transform: translateY(-10px);
+  .gallery-item {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s;
+      cursor: pointer;
+      &:hover {
+        transform: translateY(-10px);
+      }
     }
   }
+  .medium {
+    grid-row: span 4;
+    grid-column: span 2;
+  }
+  .tall {
+    grid-row: span 4;
+    grid-column: span 1;
+  }
+  .small {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .wide {
+    grid-row: span 2;
+    grid-column: span 4;
+  }
 }
-
 /*----- CONTACT SECTION -----*/
 
 .contact-content {
@@ -398,5 +403,9 @@ section {
     padding: 1rem;
   }
 }
-
+@for $i from 1 through 10 {
+  .fade-in:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.5}s;
+  }
+}
 @import "mobile";
