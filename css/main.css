@@ -4676,7 +4676,7 @@ section {
   padding-right: 4rem;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(20, 6vw);
+  grid-template-rows: repeat(20, 4vw);
   grid-gap: 15px;
   margin-top: 4rem; }
   .gallery-content .gallery-item img {
